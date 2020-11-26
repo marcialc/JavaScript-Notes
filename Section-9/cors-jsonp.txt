@@ -1,0 +1,10 @@
+
+CORS
+
+- allows you to break the same origin policy of a browser.
+
+
+JSONP
+
+-Sudo standart to retrieve data from a domain
+-It only works with GET request DOESN'T work with (PUT, POST, DELETE)

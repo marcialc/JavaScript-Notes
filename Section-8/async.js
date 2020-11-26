@@ -44,3 +44,16 @@ mac();
 doAsyncTask().then(val => console.log(val));
 
 console.log('here');  
+
+
+const doAsyncTasks = (delay) => {
+    return () => new Promise(resolve => setTimeout(() => resolve(delay), delay));
+}
+
+let tasks = [doAsyncTasks(1000), doAsyncTasks(2000), doAsyncTasks(500)];
+
+(async () => {
+    for(let task of tasks) {
+        console.log(await task());
+    }
+})();
